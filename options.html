@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Brazza Whats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Configurações do Brazza Whats</h1>
+    </header>
+
+    <div class="content">
+        <div class="info-box">
+            Esta extensão ajuda você a organizar e enviar mensagens pré-definidas no WhatsApp Web.
+        </div>
+
+        <div class="section">
+            <h2>Configurações Gerais</h2>
+
+            <div class="option">
+                <input type="checkbox" id="envio-automatico">
+                <label for="envio-automatico">Envio automático de mensagens (envia após inserir o texto)</label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="minimizar-ao-iniciar">
+                <label for="minimizar-ao-iniciar">Minimizar painel ao iniciar</label>
+            </div>
+
+            <div class="form-group">
+                <label for="tempo-delay">Delay para envio automático (ms):</label>
+                <input type="number" id="tempo-delay" min="0" max="5000" value="500">
+            </div>
+
+            <div class="form-group">
+                <label for="posicao">Posição do painel:</label>
+                <select id="posicao">
+                    <option value="top-right">Superior Direito</option>
+                    <option value="top-left">Superior Esquerdo</option>
+                    <option value="bottom-right">Inferior Direito</option>
+                    <option value="bottom-left">Inferior Esquerdo</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Aparência</h2>
+
+            <div class="form-group">
+                <label for="tema">Tema:</label>
+                <select id="tema">
+                    <option value="light">Claro</option>
+                    <option value="dark">Escuro</option>
+                    <option value="auto">Automático (conforme sistema)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Cor Principal:</label>
+                <div class="color-picker">
+                    <div class="color-option selected" style="background-color: #007bff;" data-color="#007bff"></div>
+                    <div class="color-option" style="background-color: #28a745;" data-color="#28a745"></div>
+                    <div class="color-option" style="background-color: #fd7e14;" data-color="#fd7e14"></div>
+                    <div class="color-option" style="background-color: #6f42c1;" data-color="#6f42c1"></div>
+                    <div class="color-option" style="background-color: #e83e8c;" data-color="#e83e8c"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Gerenciamento de Dados</h2>
+
+            <p>Exporte suas categorias e mensagens para fazer backup ou transferir para outro dispositivo.</p>
+
+            <button id="configuracoes-btn" class="action-btn">⚙️ Configurações</button>
+
+            <div id="configuracoes-opcoes" style="display: none;">
+                <div class="import-export">
+                    <button id="exportar-dados">Exportar Dados</button>
+                    <button id="importar-dados">Importar Dados</button>
+                </div>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <button id="reset-dados" class="btn-danger">Resetar Todos os Dados</button>
+                    <p style="color: var(--text-muted); font-size: 12px;">
+                        Atenção: Esta ação irá apagar todas as suas categorias e mensagens salvas.
+                    </p>
+                </div>
+            </div>
+
+            <input type="file" id="arquivo-importacao" style="display: none;">
+        </div>
+
+        <div class="section">
+            <h2>Atalhos de Teclado</h2>
+
+            <div class="option">
+                <input type="checkbox" id="atalhos-habilitados" checked>
+                <label for="atalhos-habilitados">Habilitar atalhos de teclado</label>
+            </div>
+
+            <p>Atalhos disponíveis:</p>
+            <ul>
+                <li><strong>Ctrl+Shift+B</strong> - Mostrar/ocultar o painel da extensão</li>
+                <li><strong>Alt+N</strong> - Criar nova categoria</li>
+                <li><strong>Alt+M</strong> - Criar nova mensagem na categoria atual</li>
+            </ul>
+        </div>
+
+        <div class="action-buttons">
+            <div class="button-group">
+                <button id="salvar-config" class="btn-success">Salvar Configurações</button>
+                <button id="cancelar">Cancelar</button>
+            </div>
+        </div>
+
+        <div class="version">
+            Brazza Whats v1.1.0
+        </div>
+    </div>
+</div>
+
+<script src="options.js"></script>
+</body>
+</html>

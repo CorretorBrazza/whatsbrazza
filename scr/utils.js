@@ -1,0 +1,1 @@
+// Funções utilitárias podem ser adicionadas aqui

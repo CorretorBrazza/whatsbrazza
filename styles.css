@@ -1,0 +1,68 @@
+/* Variáveis de cores e tamanhos */
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --danger-color: #dc3545;
+  --danger-hover: #bb2d3b;
+  --success-color: #28a745;
+  --success-hover: #218838;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --text-color: #212529;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+/* Tema escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #0d6efd;
+    --primary-hover: #3d8bfd;
+    --background-color: #121212;
+    --card-background: #1e1e1e;
+    --text-color: #e0e0e0;
+    --border-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Estilos gerais */
+button, input {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: all var(--transition-speed) ease;
+}
+
+button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+.extensao-content {
+  overflow-y: auto;
+  padding: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+
+.extensao-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.extensao-content::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+
+.extensao-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Dropdown */
+.configuracoes-container:hover .configuracoes-dropdown {
+  display: flex;
+}
